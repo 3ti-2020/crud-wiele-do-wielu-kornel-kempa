@@ -1,0 +1,31 @@
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "a a a"
+    "b b c"
+    "b b c";
+}
+.itema{
+    background: khaki;
+    grid-area: a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.itemb{
+    background: darkgoldenrod;
+    grid-area: b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.itemc{
+    background: wheat;
+    grid-area: c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
