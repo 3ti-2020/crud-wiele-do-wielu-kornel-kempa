@@ -3,9 +3,10 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "a a a"
-    "b b c"
-    "b b c";
+    grid-template-areas:
+    "a a d "
+    "b b c "
+    "b b c ";
 }
 .itema{
     background: khaki;
@@ -27,4 +28,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.itemd{
+    background: teal;
+    grid-area: d;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link{
+    text-decoration: none;
+    color: black;
+    padding: 20px 50px;
+    background: gray;
+    margin: 20px;
 }

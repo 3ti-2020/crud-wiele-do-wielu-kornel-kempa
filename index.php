@@ -18,6 +18,11 @@
     </form>
     
     </div>
+  <div class="itemd">
+
+            <a href="index.html" class="link">KARTA</a>
+         
+  </div>
     <div class="itemc">
     <?php
                 $servername = "remotemysql.com";
