@@ -8,7 +8,8 @@
 </head>
 <body>
 <div class="itema"><h1>Kornel Kempa</h1></div>
-<form action="insert.php" method="post">
+    <div class="itemb">
+    <form action="insert.php" method="post">
     <p>Imie</p>
     <input type="text" name="imie">
     <p>Tytul</p>
