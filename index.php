@@ -42,5 +42,4 @@
    
     
 </body>
-<script src="main.js">
 </html>
