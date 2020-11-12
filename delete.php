@@ -1,15 +1,12 @@
 
-    <?php
- 
-        require_once "conn.php"; 
-        $conn=mysqli_connect($servername, $username, $password, $dbname) or die("Błąd połączenia");
-        $id = $_POST['idusun'];
-        $sql = "DELETE * FROM lib_autor_tytul WHERE id_autor_tytul='$idusun'";
-    
-        mysqli_query($conn, $sql)
-        echo "Usunieto";
-        header('Location: https://kornel1.herokuapp.com/logowanie.php');
-    
-    
-    
-    ?>
+ <?php
+$servername = "remotemysql.com";
+$username = "yjgnzoishf";
+$password = "ZApgJadL9H";
+$dbname = "yjgnzoishf";
+ $conn = new mysqli($servername, $username, $password, $dbname);
+ $id = $_POST['id'];
+ $sql = "DELETE from lib_autor_tytul WHERE id_autor_tytul='$id'";
+ mysqli_query($conn, $sql);
+ header('Location: https://kornel1.herokuapp.com/logowanie.php');
+?>
