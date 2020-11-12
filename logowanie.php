@@ -78,15 +78,10 @@
                                 echo("</tr>");
                             }
                             echo("</table>");
-                        }else{
-                            $SESSION['blad'] = '<span style="color:red">Nieprawidłowy login lub hasło!</span>';
-                            header('Location: index.php');
                         }
                     }
 
                     
-                }else{
-                    header('Location: index.php');
                 }
 
 
