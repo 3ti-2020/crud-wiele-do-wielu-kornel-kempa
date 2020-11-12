@@ -70,6 +70,12 @@
                                     </form>
                                     </td>";
                                 echo("</tr>");
+                                echo("<td>
+                                <form action='wypozycz.php' method='POST'>
+                                <input type='hidden' name='idtytul' value=".$row[0].">
+                                <input type='submit' value='wypozycz'>
+                                </form> </td>");
+                                echo("</tr>");
                             }
                             echo("</table>");
                         }else{

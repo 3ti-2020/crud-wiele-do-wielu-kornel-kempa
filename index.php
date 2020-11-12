@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="itema"><h1>Kornel Kempa(VER 1.5)</h1></div>
+<div class="itema"><h1>Kornel Kempa(VER 1.6)</h1></div>
     <div class="itemb">
         <div class="lewy">
 
@@ -28,12 +28,8 @@
                 </div>
             </form>
         </div>
-        <?php
-            if(isset($_SESSION['blad']))
-            {
-            echo $_SESSION['blad'];
-            }
-            ?>
+        
+            
 
     
     </div>
