@@ -21,7 +21,7 @@
   <div class="itemd">
         <a href="index.html" class="link">KARTA</a>
         <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-kornel-kempa" class="link">GITHUB</a>
-        <a href="#" class="link">LOGOWANIE</a>
+        <a href="index.php" class="link">WYLOGUJ</a>
          
   </div>
     <div class="itemc">
@@ -47,6 +47,7 @@
                         {   
                             $wiersz = mysqli_fetch_array($result);
                             $_SESSION['login'] = $wiersz['login'];
+                            echo "<p>Witaj ".$_SESSION['login']."!";
                             $query="SELECT id_autor_tytul, imie, tytul FROM lib_tytul, lib_autor, lib_autor_tytul WHERE lib_autor_tytul.id_autor=lib_autor.id_autor AND lib_autor_tytul.id_tytul=lib_tytul.id_tytul";
                             $result=mysqli_query($conn,$query);
 
