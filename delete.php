@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST))
+if(isset($_POST['id']))
 {   
     require_once "conn.php"; 
     $conn=mysqli_connect($servername, $username, $password, $dbname) or die("Błąd połączenia");
