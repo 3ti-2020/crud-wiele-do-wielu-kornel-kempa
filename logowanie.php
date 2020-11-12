@@ -47,7 +47,6 @@
                         {   
                             $wiersz = mysqli_fetch_array($result);
                             $_SESSION['login'] = $wiersz['login'];
-                            echo "<p>Witaj ".$_SESSION['login']."!";
                             $query="SELECT id_autor_tytul, imie, tytul FROM lib_tytul, lib_autor, lib_autor_tytul WHERE lib_autor_tytul.id_autor=lib_autor.id_autor AND lib_autor_tytul.id_tytul=lib_tytul.id_tytul";
                             $result=mysqli_query($conn,$query);
 
