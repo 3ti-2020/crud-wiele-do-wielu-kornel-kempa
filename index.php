@@ -15,6 +15,13 @@
         <p>Hasło</p>
         <input type="text" name="haslo"> <br>
         <input type="submit" value="Zaloguj"> <br>
+        <?php
+        if(isset($_SESSION['blad']))
+        {
+        echo $_SESSION['blad'];
+        }
+
+?>
     </form>
     
     </div>
