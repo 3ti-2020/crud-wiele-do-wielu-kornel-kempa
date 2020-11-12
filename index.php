@@ -26,13 +26,12 @@
   </div>
     <div class="itemc">
     <?php
-                $servername = "remotemysql.com";
-                $username = "yjgnzoishf";
-                $password = "ZApgJadL9H";
-                $dbname = "yjgnzoishf";
-                $conn = new mysqli($servername, $username, $password, $dbname);
+                session_start(); 
+                require_once "conn.php";
+                $conn=mysqli_connect($servername, $username, $password, $dbname) or die("Błąd połączenia");
 
-                $result = $conn->query("SELECT id_autor_tytul, imie, tytul FROM lib_tytul, lib_autor, lib_autor_tytul WHERE lib_autor_tytul.id_autor=lib_autor.id_autor AND lib_autor_tytul.id_tytul=lib_tytul.id_tytul");
+                $query="SELECT id_autor_tytul, imie, tytul FROM lib_tytul, lib_autor, lib_autor_tytul WHERE lib_autor_tytul.id_autor=lib_autor.id_autor AND lib_autor_tytul.id_tytul=lib_tytul.id_tytul";
+                $result=mysqli_query($conn,$query);
 
                 echo("<table border=1>");
                 echo("
@@ -41,11 +40,11 @@
                 <th>tytul</th>
                 ");
 
-                while($row = $result->fetch_assoc() ){
+                while($row = mysqli_fetch_row($result) ){
                     echo("<tr>");
-                    echo("<td>".$row['id_autor_tytul']."</td>");
-                    echo("<td>".$row['imie']."</td>");
-                    echo("<td>".$row['tytul']."</td>");
+                    echo("<td>".$row[0]."</td>");
+                    echo("<td>".$row[1]."</td>");
+                    echo("<td>".$row[2]."</td>");
                     echo("</tr>");
                 }  
                 echo("</table>");
