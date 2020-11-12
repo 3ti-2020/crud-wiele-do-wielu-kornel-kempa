@@ -37,5 +37,4 @@ $sql_a_t = "INSERT INTO `lib_autor_tytul`(`id_autor_tytul`, `id_autor`, `id_tytu
 
 $query3 = mysqli_query($conn, $sql_a_t);
 }
-header('Location: https://kornel1.herokuapp.com/')
 ?>
