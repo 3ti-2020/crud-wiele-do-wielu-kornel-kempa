@@ -64,7 +64,7 @@
                                 echo("<td>".$row[1]."</td>");
                                 echo("<td>".$row[2]."</td>");
                                 echo "<td>
-                                    <form action='logowanie.php' method='POST'>
+                                    <form action='delete.php' method='POST'>
                                     <input type='hidden' name='id' value=".$row[0].">
                                     <input type='submit' value='delete'>
                                     </form>

@@ -8,9 +8,10 @@ if(isset($_POST['id']))
  
     mysqli_query($conn, $sql)
     echo "Usunieto";
+    header('Location: https://kornel1.herokuapp.com/logowanie.php');
  }else{
      echo "Wystąpił blad";
  }
  
- //header('Location: https://kornel1.herokuapp.com/logowanie.php');
+ 
 ?>
