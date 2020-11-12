@@ -64,8 +64,8 @@
                                 echo("<td>".$row[1]."</td>");
                                 echo("<td>".$row[2]."</td>");
                                 echo "<td>
-                                    <form action='delete.php' method='POST'>
-                                    <input type='hidden' name='id' value=".$row['0'].">
+                                    <form action='logowanie.php' method='POST'>
+                                    <input type='hidden' name='id' value=".$row[0].">
                                     <input type='submit' value='delete'>
                                     </form>
                                     </td>";
@@ -82,6 +82,9 @@
                 }else{
                     header('Location: index.php');
                 }
+
+
+                if($_POST)
                 mysqli_close($conn);
 
 
