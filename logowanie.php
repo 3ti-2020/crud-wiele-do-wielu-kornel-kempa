@@ -40,12 +40,12 @@
                     $conn=mysqli_connect($servername, $username, $password, $dbname) or die("Błąd połączenia");
                     
                     $query2 = "SELECT * FROM uzytkownicy WHERE login='$login' AND haslo='$haslo'";
-                    if($result = mysqli_query($conn, $query2))
+                    if($result2 = mysqli_query($conn, $query2))
                     {
-                        $uzytkownik = mysqli_num_rows($result);
+                        $uzytkownik = mysqli_num_rows($result2);
                         if($uzytkownik > 0)
                         {   
-                            $wiersz = mysqli_fetch_array($result);
+                            $wiersz = mysqli_fetch_array($result2);
                             
                             $query="SELECT id_autor_tytul, imie, tytul FROM lib_tytul, lib_autor, lib_autor_tytul WHERE lib_autor_tytul.id_autor=lib_autor.id_autor AND lib_autor_tytul.id_tytul=lib_tytul.id_tytul";
                             $result=mysqli_query($conn,$query);
