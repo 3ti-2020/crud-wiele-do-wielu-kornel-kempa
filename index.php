@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="itema"><h1>Kornel Kempa(VER 1.9)</h1></div>
+<div class="itema"><h1>Kornel Kempa(VER 2.0)</h1></div>
     <div class="itemb">
         <div class="lewy">
 
