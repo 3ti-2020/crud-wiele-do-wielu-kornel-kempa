@@ -55,6 +55,7 @@
                             <th>id</th>
                             <th>imie</th>
                             <th>tytul</th>
+                            <th>Usuń</th>
                             ");
 
                             while($row = mysqli_fetch_row($result) ){
@@ -62,6 +63,12 @@
                                 echo("<td>".$row[0]."</td>");
                                 echo("<td>".$row[1]."</td>");
                                 echo("<td>".$row[2]."</td>");
+                                echo "<td>
+                                    <form action='delete.php' method='POST'>
+                                    <input type='hidden' name='id' value=".$row['id_autor_tytul'].">
+                                    <input type='submit' value='delete'>
+                                    </form>
+                                    </td>";
                                 echo("</tr>");
                             }
                             echo("</table>");
