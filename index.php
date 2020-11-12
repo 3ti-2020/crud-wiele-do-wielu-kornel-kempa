@@ -9,20 +9,32 @@
 <body>
 <div class="itema"><h1>Kornel Kempa</h1></div>
     <div class="itemb">
-        <form action="logowanie.php" method="post">
-        <p>Login</p>
-        <input type="text" name="login">
-        <p>Hasło</p>
-        <input type="text" name="haslo"> <br>
-        <input type="submit" value="Zaloguj"> <br>
-        <?php
-        if(isset($_SESSION['blad']))
-        {
-        echo $_SESSION['blad'];
-        }
+        <div class="lewy">
 
-?>
-    </form>
+            <form action="logowanie.php" method="post">
+                <p>Login</p>
+                <input type="text" name="login">
+                <p>Hasło</p>
+                <input type="text" name="haslo"> <br>
+                <input type="submit" value="Zaloguj"> <br>
+            </form>
+        </div>
+        <div class="prawy">
+            <form action="dodawnie_uzytkownika.php" method="post">
+                Tworzenie nowego uzytkownika:<br>
+                Wprowadz login: <input type="text" name="loginwlasciwy"><br>
+                Wprowadz haslo: <input type="text" name="haslowlasciwy"><br>
+                <input type="submit" value="Zarejestruj sie!">
+                </div>
+            </form>
+        </div>
+        <?php
+            if(isset($_SESSION['blad']))
+            {
+            echo $_SESSION['blad'];
+            }
+            ?>
+
     
     </div>
   <div class="itemd">

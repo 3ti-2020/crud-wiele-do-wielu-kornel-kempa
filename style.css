@@ -9,6 +9,17 @@ body{
     "b b c "
     "b b c ";
 }
+
+.lewy{
+    float: left;
+    height: 200px;
+    width: 200px;
+}
+.prawy{
+    float: left;
+    height: 200px;
+    width: 200px;
+}
 .itema{
     background: khaki;
     grid-area: a;
