@@ -65,7 +65,7 @@
                                 echo("<td>".$row[2]."</td>");
                                 echo "<td>
                                     <form action='delete.php' method='POST'>
-                                    <input type='hidden' name='id' value=".$row['id_autor_tytul'].">
+                                    <input type='hidden' name='id' value=".$row['0'].">
                                     <input type='submit' value='delete'>
                                     </form>
                                     </td>";
