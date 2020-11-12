@@ -9,12 +9,12 @@
 <body>
 <div class="itema"><h1>Kornel Kempa</h1></div>
     <div class="itemb">
-    <form action="insert.php" method="post">
-    <p>Imie</p>
-    <input type="text" name="imie">
-    <p>Tytul</p>
-    <input type="text" name="tytul"> <br>
-    <input type="submit" value="Dodaj"> <br>
+        <form action="logowanie.php" method="post">
+        <p>Imie</p>
+        <input type="text" name="login">
+        <p>Tytul</p>
+        <input type="text" name="haslo"> <br>
+        <input type="submit" value="Dodaj"> <br>
     </form>
     
     </div>
@@ -26,7 +26,7 @@
   </div>
     <div class="itemc">
     <?php
-                session_start(); 
+                
                 require_once "conn.php";
                 $conn=mysqli_connect($servername, $username, $password, $dbname) or die("Błąd połączenia");
 
@@ -49,7 +49,7 @@
                 }  
                 echo("</table>");
 
-                
+                mysqli_close($conn);
 
 
             ?>
