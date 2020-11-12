@@ -10,11 +10,11 @@
 <div class="itema"><h1>Kornel Kempa</h1></div>
     <div class="itemb">
         <form action="logowanie.php" method="post">
-        <p>Imie</p>
+        <p>Login</p>
         <input type="text" name="login">
-        <p>Tytul</p>
+        <p>Hasło</p>
         <input type="text" name="haslo"> <br>
-        <input type="submit" value="Dodaj"> <br>
+        <input type="submit" value="Zaloguj"> <br>
     </form>
     
     </div>
