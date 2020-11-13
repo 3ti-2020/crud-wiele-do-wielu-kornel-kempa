@@ -53,7 +53,7 @@
                             echo("<table border=1>");
                             echo("
                             <th>id</th>
-                            <th>imie</th>
+                            <th>autor</th>
                             <th>tytul</th>
                             <th>Usuń</th>
                             <th>Wypożycz</th>
