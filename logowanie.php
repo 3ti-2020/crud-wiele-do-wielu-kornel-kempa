@@ -79,6 +79,9 @@
                                 echo("</tr>");
                             }
                             echo("</table>");
+
+
+                
                         //}
                     //}
 
@@ -91,6 +94,33 @@
 
 
             ?>
+
+<?php
+    require_once "conn.php";
+    $conn=mysqli_connect($servername, $username, $password, $dbname) or die("Błąd połączenia");
+    $query="SELECT id_wypoz, lib_wypoz.id_tytul, lib_tytul.tytul, uzytkownicy.login, data_wypoz FROM lib_wypoz,uzytkownicy,lib_tytul WHERE lib_wypoz.id_tytul = lib_tytul.id_tytul AND lib_wypoz.id_uzytk=uzytkownicy.id";
+    $result=mysqli_query($conn,$query);
+    
+    echo("<table class='tabelka' border='1'>");
+    echo("<th>Id</th>");
+    echo("<th>Id tytuł</th>");
+    echo("<th>Tytuł</th>");
+    echo("<th>Login</th>");
+    echo("<th>Data</th>");
+    echo("<th>Oddaj</th>");
+    while($row = $result -> fetch_assoc()){
+        echo("<tr class='myrow'>");
+        echo("<td>".$row['id_wypoz']."</td>"."<td>".$row['id_tytul']."</td>"."<td>".$row['tytul']."</td>"."<td>".$row['login']."</td>"."<td>".$row['haslo']."</td>"."<td>".$row['data_wypoz']."</td>");
+        echo("<td>
+        <form action='oddaj.php' method='POST'>
+        <input type='hidden' name='idoddaj' value=".$row['id_wypoz'].">
+        <input type='submit' value='Oddaj'>
+        </form> </td>");
+        echo("</tr>");
+    }
+    echo("</table>");
+    ?>
+    
     </div>
    
     

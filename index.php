@@ -36,7 +36,6 @@
   <div class="itemd">
         <a href="index.html" class="link">KARTA</a>
         <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-kornel-kempa" class="link">GITHUB</a>
-        <a href="#" class="link">LOGOWANIE</a>
          
   </div>
     <div class="itemc">
@@ -68,6 +67,7 @@
 
 
             ?>
+
     </div>
    
     
