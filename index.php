@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="itema"><h1>Kornel Kempa(VER 2.4)</h1></div>
+<div class="itema"><h1>Kornel Kempa(VER 2.5)</h1></div>
     <div class="itemb">
         <div class="lewy">
 
-            <form action="logowanie.php" method="post">
+            <form action="login.php" method="post">
                 <p>Login</p>
                 <input type="text" name="login">
                 <p>Hasło</p>
