@@ -28,24 +28,11 @@
     <?php
                 
         
-                //if(isset($_POST['login']) && isset($_POST['haslo']))
-                //{
-                    
-                    //$login = $_POST['login'];
-                    //$haslo = $_POST['haslo'];
-                    
-                    
                     
                     require_once "conn.php";
                     $conn=mysqli_connect($servername, $username, $password, $dbname) or die("Błąd połączenia");
                     
-                    //$query2 = "SELECT * FROM uzytkownicy WHERE login='$login' AND haslo='$haslo'";
-                    //if($result2 = mysqli_query($conn, $query2))
-                    //{
-                        //$uzytkownik = mysqli_num_rows($result2);
-                        //if($uzytkownik > 0)
-                        //{   
-                            //$wiersz = mysqli_fetch_array($result2);
+                    
                             
                             $query="SELECT id_autor_tytul, imie, tytul FROM lib_tytul, lib_autor, lib_autor_tytul WHERE lib_autor_tytul.id_autor=lib_autor.id_autor AND lib_autor_tytul.id_tytul=lib_tytul.id_tytul";
                             $result=mysqli_query($conn,$query);
@@ -56,6 +43,7 @@
                             <th>imie</th>
                             <th>tytul</th>
                             <th>Usuń</th>
+                            <th>Wypożycz</th>
                             ");
 
                             while($row = mysqli_fetch_row($result) ){
@@ -69,7 +57,7 @@
                                     <input type='submit' value='delete'>
                                     </form>
                                     </td>";
-                                echo("</tr>");
+                                
                                 echo("<td>
                                 <form action='wypozycz.php' method='POST'>
                                 <input type='hidden' name='idtytul' value=".$row[0].">
@@ -78,14 +66,7 @@
                                 echo("</tr>");
                             }
                             echo("</table>");
-                        //}
-                    //}
-
-                    
-                //}
-
-
-                if($_POST)
+                        
                 mysqli_close($conn);
 
 
