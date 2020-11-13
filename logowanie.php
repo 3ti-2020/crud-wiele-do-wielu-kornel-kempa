@@ -17,7 +17,7 @@
         <input type="submit" value="Dodaj"> <br>
         </form>
 
-        <form action="insert.php" method="post">
+        <form action="" method="post">
             <?php
                  require_once "conn.php";
                  $conn=mysqli_connect($servername, $username, $password, $dbname) or die("Błąd połączenia");
@@ -32,6 +32,7 @@
                  }
                  echo "</select>";
             ?>
+            <input type="submit" value="wypozycz">
         <form>
     
     </div>
