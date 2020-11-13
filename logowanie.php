@@ -11,9 +11,9 @@
     <div class="itemb">
         <form action="insert.php" method="post">
         <p>Imie</p>
-        <input type="text" name="imie">
+        <input type="text" name="imie" require>
         <p>Tytul</p>
-        <input type="text" name="tytul"> <br>
+        <input type="text" name="tytul" require> <br>
         <input type="submit" value="Dodaj"> <br>
     </form>
     
