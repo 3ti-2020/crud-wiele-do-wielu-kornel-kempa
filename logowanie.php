@@ -56,6 +56,7 @@
                             <th>imie</th>
                             <th>tytul</th>
                             <th>Usuń</th>
+                            <th>Wypożycz</th>
                             ");
 
                             while($row = mysqli_fetch_row($result) ){
