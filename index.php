@@ -13,9 +13,9 @@
 
             <form action="logowanie.php" method="post">
                 <p>Login</p>
-                <input type="text" name="login" require>
+                <input type="text" name="login" placeholder="a" require>
                 <p>Hasło</p>
-                <input type="text" name="haslo" require> <br>
+                <input type="text" name="haslo" placeholder="a" require> <br>
                 <input type="submit" value="Zaloguj"> <br>
             </form>
         </div>
