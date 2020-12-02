@@ -40,8 +40,9 @@ body{
     background: wheat;
     grid-area: c;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex:wrap;
 }
 .itemd{
     background: teal;
@@ -56,4 +57,8 @@ body{
     padding: 20px 50px;
     background: gray;
     margin: 20px;
+}
+.question{
+    background:blueviolet;
+    margin: 10px;
 }

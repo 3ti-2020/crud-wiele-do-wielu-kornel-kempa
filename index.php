@@ -35,6 +35,7 @@
     </div>
   <div class="itemd">
         <a href="index.html" class="link">KARTA</a>
+        <a href="ee.html" class="link">EE.09</a>
         <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-kornel-kempa" class="link">GITHUB</a>
          
   </div>
