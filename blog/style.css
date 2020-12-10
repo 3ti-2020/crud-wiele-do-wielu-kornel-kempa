@@ -1,0 +1,25 @@
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "a a a"
+    "b b c"
+    "b b c";
+}
+.itema{
+    grid-area:a;
+    background:palegoldenrod;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.itemb{
+    grid-area:b;
+    background:tan;
+}
+.itemc{
+    grid-area:c;
+    background:sandybrown;
+}
