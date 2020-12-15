@@ -15,11 +15,7 @@
         <div class="itemc">
         <div class="menu">
 
-            <form action="wyszukiwanie.php" method="post" class='form_tag'>
-                <p>Wyszukaj po tagu:</p>
-                <p>#<input type='text' name='wyszukaj' class='szukaj'></p>
-                <input type="submit" class='szukaj' value='Wyszukaj'>
-            </form>
+            
 
         </div>
         </div>
