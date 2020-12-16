@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kornel Kempa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,17 +23,17 @@ if(isset($_GET['akcja'])){
 ?>
     <div class="container">
         <div class="itema">
-            <h1>BLOG</h1>
+            <h1>Słynni piłkarze</h1>
         </div>
         <div class="itemb">
         <?php            
             while($wiersz = $result->fetch_assoc()){
                 echo("<div class='header'>");
-                    echo("<h1>".$wiersz['tytul']."</h1>");
-                    $posty = $wiersz["id"];
-                    $result2 = $conn->query("SELECT tag FROM `post_tag`, posty, tagi WHERE post_tag.posty_id = posty.id AND post_tag.tagi_id = tagi.id AND post_tag.posty_id = $posty");
-                while($wiersz2 = $result2->fetch_assoc()){
-                    echo("<tr><b><a href='?akcja=".$wiersz2['tag']."'>".$wiersz2['tag']."</a></b></tr>, ");
+                echo("<h2>".$wiersz['tytul']."</h2>");
+                $posty = $wiersz["id"];
+                $result2 = $conn->query("SELECT tag FROM `post_tag`, posty, tagi WHERE post_tag.posty_id = posty.id AND post_tag.tagi_id = tagi.id AND post_tag.posty_id = $posty");
+                    while($wiersz2 = $result2->fetch_assoc()){
+                    echo("<tr><b><a href='?akcja=".$wiersz2['tag']."'>".$wiersz2['tag']."</a></b></tr> | ");
                 } 
                 echo("</div>");
                 echo("<div class='main'>");
